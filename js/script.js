@@ -4,7 +4,6 @@ let increment = document.querySelector('#plu');
 let decrement = document.querySelector('#min');
 let input = document.querySelector('#change');
 
-input.innerText = 0;
 
 increment.addEventListener('click', () => {
 
@@ -56,11 +55,3 @@ $('#currentImg').elevateZoom();
 $('.wish').on('click', () => {
     $('#wish').css('color', 'red');
 })
-
-
-
-
-
-// $('#plu').css("color", "red");
-// increment.style.color = 'red';
-// $(increment).style.color = 'red';

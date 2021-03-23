@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="../css/checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
             <div class="leftCart">
                 <div class="summary">
                     <div class="orderSum">
-                        <h3>Order Summary</h3>
+                        <h2>Order Summary</h2>
                         <h5>4 items</h5>
                     </div>
                     <div class="detailSum">
@@ -35,7 +36,7 @@
                     </div>
                     <div class="payment">
                         <p>or 4 payments of $12.25 by </p>
-                        <img src="images/afterpay-lockup-blackonwhite.svg" alt="">?
+                        <img src="../images/afterpay-lockup-blackonwhite.svg" alt="">?
                     </div>
                     <div id="promo" class="code">
                         <input type="text" class="txt" placeholder="Enter promo code">
@@ -44,16 +45,13 @@
                     <div class="checkitout">
                         <button id="checkitout">CHECKOUT</button>
                     </div>
-                    <p>or pay with:</p>
+                    <p class="optane"> or pay with:</p>
                     <div class="paymentMethod">
                         <div class="paypal">
-
-                        </div>
-                        <div class="credit">
-
+                            <P>Paypal</P>
                         </div>
                         <div class="amazonPay">
-
+                            <p>AmazonPay</p>
                         </div>
                     </div>
                 </div>
@@ -88,9 +86,9 @@
                             </div>
                             <div class="manipu">
                                 <p><a href="#"> Edit </a></p>
-                                <p>|</p>
+                                <!-- <p>|</p> -->
                                 <p><a href="#"> Move to Wishlist </a> </p>
-                                <p>|</p>
+                                <!-- <p>|</p> -->
                                 <p><a href="#"> Remove</a> </p>
                             </div>
                         </div>
@@ -106,9 +104,12 @@
                         </div>
                         <div class="discQuan">
                             <P>UNIT PRICE</P>
-                            <P>Was
-                            <h6>@ $98.50</h6>
-                            </P>
+                            <div class="inlin">
+                                <P>Was
+                                <ok>@ $98.50</ok>
+                                </P>
+                                <p>$195.96</p>
+                            </div>
                         </div>
                         <div class="gift">
                             <input type="checkbox" id="gift" name="gift" value="gift">
@@ -122,6 +123,10 @@
                         <label for="pickup"> In-Store Pickup </label><br>
                         <input type="radio" id="curb" name="curb" value="curb">
                         <label for="curb"> Curbside Pickup</label><br>
+                    </div>
+                    <div class="toapPRI">
+                        <P>$394.00</P>
+                        <P>$195.96</P>
                     </div>
                 </div>
             </div>
