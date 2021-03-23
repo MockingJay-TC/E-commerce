@@ -4,9 +4,12 @@ let increment = document.querySelector('#plu');
 let decrement = document.querySelector('#min');
 let input = document.querySelector('#change');
 
+input.innerText = 0;
 
 increment.addEventListener('click', () => {
-    input.innerText = parseInt(input.innerText) + 1;
+
+    if (input.innerText <= 9)
+        input.innerText = parseInt(input.innerText) + 1;
 })
 
 decrement.addEventListener('click', () => {
@@ -25,28 +28,37 @@ let cute = document.querySelector('#cute');
 let back = document.querySelector('#back');
 let current = document.querySelector('#currentImg');
 
-hoodie.addEventListener('click', () =>{
+hoodie.addEventListener('click', () => {
     current.src = 'images/hoodie.jpg';
     $('#hoodie').css('border', '3px solid #002b5c');
     $('#cute').css('border', '3px solid #cecece');
     $('#back').css('border', '3px solid #cecece');
 })
 
-cute.addEventListener('click', () =>{
+cute.addEventListener('click', () => {
     current.src = 'images/cutie.jpg';
     $('#cute').css('border', '3px solid #002b5c');
     $('#hoodie').css('border', '3px solid #cecece');
     $('#back').css('border', '3px solid #cecece');
 })
 
-back.addEventListener('click', () =>{
+back.addEventListener('click', () => {
     current.src = 'images/back.jpg';
     $('#back').css('border', '3px solid #002b5c');
     $('#cute').css('border', '3px solid #cecece');
     $('#hoodie').css('border', '3px solid #cecece');
 })
 
-$('#current').elevateZoom();
+$('#currentImg').elevateZoom();
+
+
+
+$('.wish').on('click', () => {
+    $('#wish').css('color', 'red');
+})
+
+
+
 
 
 // $('#plu').css("color", "red");

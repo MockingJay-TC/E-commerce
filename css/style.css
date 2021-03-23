@@ -114,15 +114,20 @@
 .actSize ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  align-items: center;
+
+  
 }
 .actSize ul li {
-  width: 40px;
-  height: 40px;
-  background: #cecece;
+  width: 30px;
+  height: 30px;
+  background: #e7e7e7;
   color: black;
-  margin: 0px 0px 10px 0px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
+
+  padding:5px;
 }
 .actSize ul li:hover {
   background: #1176bb;
@@ -157,9 +162,9 @@
   color: #002b5c;
   cursor: pointer;
 }
-.quantity input {
+/* .quantity input {
   width: auto;
-}
+} */
 
 .cart {
   width: 400px;
@@ -253,4 +258,9 @@
 .wish img {
   width: 20px;
   height: 20px;
+}
+
+.wish i{
+  font-size: 18px;
+  line-height: 20px;
 }

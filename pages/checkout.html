@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+    <div class="scaffold">
+        <div class="nav-section">
+
+        </div>
+        <div class="container">
+            <div class="leftCart">
+                <div class="summary">
+                    <div class="orderSum">
+                        <h3>Order Summary</h3>
+                        <h5>4 items</h5>
+                    </div>
+                    <div class="detailSum">
+                        <div class="value">
+                            <p>Subtotal</p>
+                            <p>Salex Tax</p>
+                            <p>ESTIMATED TOTAL*</p>
+                        </div>
+                        <div class="prices">
+                            <P id="subtotal">$195.96</P>
+                            <P id="tax">$0.00</P>
+                            <P id="addition"> <strong>$195.96</strong> </P>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <p>or 4 payments of $12.25 by </p>
+                        <img src="images/afterpay-lockup-blackonwhite.svg" alt="">?
+                    </div>
+                    <div id="promo" class="code">
+                        <input type="text" class="txt" placeholder="Enter promo code">
+                        <button id="apply"> Apply </button>
+                    </div>
+                    <div class="checkitout">
+                        <button id="checkitout">CHECKOUT</button>
+                    </div>
+                    <p>or pay with:</p>
+                    <div class="paymentMethod">
+                        <div class="paypal">
+
+                        </div>
+                        <div class="credit">
+
+                        </div>
+                        <div class="amazonPay">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightCart">
+                <div class="headerCart">
+                    <div class="itemCart">
+                        <p>ITEM</p>
+                    </div>
+                    <div class="quantityUnit">
+                        <p>QUANTITY & UNIT PRICE</p>
+                    </div>
+                    <div class="deliveryPic">
+                        <P>DELIVERY/PICKUP</P>
+                        <P></P>
+                    </div>
+                    <div class="totalCart">
+                        <p>TOTAL PRICE</p>
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="itemGoods">
+                        <div class="itemPic">
+                            <img src="../images/hoodie.jpg" alt="">
+                        </div>
+                        <div class="shouldbe">
+                            <div class="itemDet">
+                                <h4>Boys' Stillwater Sherpa 1/4-Zip </h4>
+                                <p> <strong>Style</strong>: 3K001154 | <strong>Color</strong>: Camel |
+                                    <strong>Size</strong>:4T
+                                </p>
+                            </div>
+                            <div class="manipu">
+                                <p><a href="#"> Edit </a></p>
+                                <p>|</p>
+                                <p><a href="#"> Move to Wishlist </a> </p>
+                                <p>|</p>
+                                <p><a href="#"> Remove</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quantie">
+                        <div class="selQuan">
+                            <select name="" id="">
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                            </select>
+                        </div>
+                        <div class="discQuan">
+                            <P>UNIT PRICE</P>
+                            <P>Was
+                            <h6>@ $98.50</h6>
+                            </P>
+                        </div>
+                        <div class="gift">
+                            <input type="checkbox" id="gift" name="gift" value="gift">
+                            <label for="gift"> Free gift package? </label><br>
+                        </div>
+                    </div>
+                    <div class="pickup">
+                        <input type="radio" id="ship" name="ship" value="ship">
+                        <label for="ship"> Ship to me </label><br>
+                        <input type="radio" id="pickup" name="pickup" value="pickup">
+                        <label for="pickup"> In-Store Pickup </label><br>
+                        <input type="radio" id="curb" name="curb" value="curb">
+                        <label for="curb"> Curbside Pickup</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -8,6 +8,7 @@
     <title>E-commerce</title>
     <link rel="icon" href="images/fav.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,12 +22,12 @@
         <div class="container">
             <div class="left">
                 <div class="img img1">
-                    <img  id="hoodie" src="images/hoodie.jpg" alt="Image 1">
+                    <img id="hoodie" src="images/hoodie.jpg" alt="Image 1">
                 </div>
                 <div class="img img2">
-                    <img  id="cute" src="images/cutie.jpg" alt="Image 2">
+                    <img id="cute" src="images/cutie.jpg" alt="Image 2">
                 </div>
-                <div  class="img img2">
+                <div class="img img2">
                     <img id="back" src="images/back.jpg" alt="Image 3">
                 </div>
             </div>
@@ -85,7 +86,7 @@
                 <div class="quantity">
                     <i id="min" class="fas fa-minus"></i>
                     <!-- <input type="number" value="1"> -->
-                    <div id="change" class="num"> 1 </div>
+                    <div id="change" class="num" contenteditable="true"> 1 </div>
 
                     <i id="plu" class="fas fa-plus"></i>
                 </div>
@@ -119,12 +120,37 @@
                         <p>Gift Options</p>
                     </div>
                     <div class="wish">
-                        <img src="images/download (3).svg" alt="">
+                        <!-- <img src="images/download (3).svg" alt="" > -->
+                        <i id="wish" class="fas fa-heart"></i>
                         <p>Add to wishlist</p>
                     </div>
                 </div>
             </div>
             <div class="leftover"></div>
+
+            <!-- ****************************************************************************************** -->
+
+            <div class="addCart-popup">
+                <div class="cart">
+                    <div class="itemName">
+                        <h3 class="title">Item added to Cart</h3>
+                        <div id="close">&times</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="imageItem">
+                            <img src="images/hoodie-big.jpg" alt="">
+                        </div>
+                        <div class="descItem">
+                            <h5 id="itemName"> Boys' Stillwater Sherpa 1/4-Zip</h5>
+                            <div class="price">
+                                <h5>$48.99</h5>
+                                <h5>$98.50</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
