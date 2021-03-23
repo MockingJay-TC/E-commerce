@@ -55,3 +55,20 @@ $('#currentImg').elevateZoom();
 $('.wish').on('click', () => {
     $('#wish').css('color', 'red');
 })
+
+$('#bagit').on('click', () => {
+    $('#popup').css('visibility', 'visible');
+    $('#popup').css('top', '0');
+})
+
+$('#close').on('click', () => {
+    $('#popup').css('visibility', 'hidden');
+    $('#popup').css('top', '-1000');
+})
+
+$.get("./json/products.json", function (response) {
+    response.forEach(product => {
+        console.log(product.name + ":" + product.price);
+    });
+
+})

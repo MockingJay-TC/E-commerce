@@ -177,6 +177,12 @@
   color: #ffffff;
   font-size: 20px;
   cursor: pointer;
+
+}
+.cart .bag a{
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
 }
 .cart .pickup {
   padding: 15px;
