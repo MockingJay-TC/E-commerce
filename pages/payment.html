@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
+    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="scaffold">
+        <div class="nav-section">
+            <div class="pic">
+                <a href="../index.html"> <img src="../images/logo.svg"></a>
+            </div>
+            <ul>
+                <li><a href="#">NEW</a> </li>
+                <li><a href="#">MEN</a> </li>
+                <li><a href="#">WOMEN</a> </li>
+                <li><a href="#">BOYS</a> </li>
+                <li><a href="#">GIRLS</a> </li>
+                <li><a href="#">MORE SIZES</a> </li>
+                <li><a href="#">TIES</a> </li>
+                <li><a href="#">SALE</a> </li>
+                <li><a href="#">MORE</a> </li>
+                <li>
+                    <div class="box">
+                        <input type="text" class="txt" placeholder="Type here">
+                        <a href="#"> <i class=" searchme fas fa-search"></i> </a>
+                    </div>
+                </li>
+                <li>
+                    <button class="click">
+                        <img src="../images/nav-icon.svg">
+                        <put>(<pin>3</pin>)</put>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="leftCart">
+                <div class="summary">
+                    <div class="orderSum">
+                        <h2>Order Summary</h2>
+                        <h5>4 items</h5>
+                    </div>
+                    <div class="detailSum">
+                        <div class="value">
+                            <p>Subtotal</p>
+                            <p>Salex Tax</p>
+                            <p>ESTIMATED TOTAL*</p>
+                        </div>
+                        <div class="prices">
+                            <P id="subtotal">$195.96</P>
+                            <P id="tax">$0.00</P>
+                            <P id="addition"> <strong>$195.96</strong> </P>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <p>or 4 payments of $12.25 by </p>
+                        <img src="../images/afterpay-lockup-blackonwhite.svg" alt="">?
+                    </div>
+                    <div id="promo" class="code">
+                        <input type="text" class="txt" placeholder="Enter promo code">
+                        <button id="apply"> Apply </button>
+                    </div>
+                    <div class="checkitout">
+                        <button id="checkitout">CHECKOUT</button>
+                    </div>
+                    <p class="optane"> or pay with:</p>
+                    <div class="paymentMethod">
+                        <div class="paypal">
+                            <P>Paypal</P>
+                        </div>
+                        <div class="amazonPay">
+                            <p>AmazonPay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightCart">
+                <div class="headerCart">
+                    <div class="itemCart">
+                        <p>ITEM</p>
+                    </div>
+                    <div class="quantityUnit">
+                        <p>QUANTITY & UNIT PRICE</p>
+                    </div>
+                    <div class="deliveryPic">
+                        <P>DELIVERY/PICKUP</P>
+                        <P></P>
+                    </div>
+                    <div class="totalCart">
+                        <p>TOTAL PRICE</p>
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="itemGoods">
+                        <div class="itemPic">
+                            <img src="../images/hoodie.jpg" alt="">
+                        </div>
+                        <div class="shouldbe">
+                            <div class="itemDet">
+                                <h4>Boys' Stillwater Sherpa 1/4-Zip </h4>
+                                <p> <strong>Style</strong>: 3K001154 | <strong>Color</strong>: Camel |
+                                    <strong>Size</strong>:4T
+                                </p>
+                            </div>
+                            <div class="manipu">
+                                <p><a href="#"> Edit </a></p>
+                                <!-- <p>|</p> -->
+                                <p><a href="#"> Move to Wishlist </a> </p>
+                                <!-- <p>|</p> -->
+                                <p><a href="#"> Remove</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quantie">
+                        <div class="selQuan">
+                            <select name="" id="">
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                            </select>
+                        </div>
+                        <div class="discQuan">
+                            <P>UNIT PRICE</P>
+                            <div class="inlin">
+                                <P>Was
+                                    <ok>@ $98.50</ok>
+                                </P>
+                                <p>$195.96</p>
+                            </div>
+                        </div>
+                        <div class="gift">
+                            <input type="checkbox" id="gift" name="gift" value="gift">
+                            <label for="gift"> Free gift package? </label><br>
+                        </div>
+                    </div>
+                    <div class="pickup">
+                        <input type="radio" id="ship" name="deli" value="ship">
+                        <label for="ship"> Ship to me </label><br>
+                        <input type="radio" id="pickup" name="deli" value="pickup">
+                        <label for="pickup"> In-Store Pickup </label><br>
+                        <input type="radio" id="curb" name="deli" value="curb">
+                        <label for="curb"> Curbside Pickup</label><br>
+                    </div>
+                    <div class="toapPRI">
+                        <P>$394.00</P>
+                        <P>$195.96</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

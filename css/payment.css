@@ -1,0 +1,182 @@
+* {
+    margin: 0px;
+    padding: 0px;
+   
+  }
+  .scaffold {
+    width: 98.8vw;
+    font-family: Nunito Sans, sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    position: absolute;
+    /* padding-top: 70px; */
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+  }
+  .leftCart {
+    width: 70%;
+    margin: auto;
+    box-shadow: 0px 0px 30px 0.2px rgba(0, 0, 0, 0.2);
+  }
+  .summary {
+    height: 70vh;
+  }
+  .orderSum {
+    padding: 15px;
+    color: #ffffff;
+    background: #002b5c;
+  }
+  .orderSum h2 {
+    font-weight: 400;
+  }
+  .orderSum h5 {
+    color: cornflowerblue;
+  }
+  
+  .detailSum {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px 0px 5px 0px;
+    /* margin: 20px auto; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: justify;
+  }
+  .prices {
+    padding-left: 30px;
+  }
+  
+  .payment {
+    display: flex;
+    margin: 0px 0px 2px 12%;
+    line-height: 40px;
+  }
+  .payment img {
+    width: 50px;
+    height: 40px;
+    padding-left: 5px;
+  }
+  
+  .code {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .code input {
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+  }
+  .code button {
+    color: #ffffff;
+    background: #002b5c;
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
+  .checkitout {
+    border: 1px solid #d63d57;
+    margin: auto;
+    width: 250px;
+    padding: 1px;
+    border-radius: 2px;
+  }
+  .checkitout button {
+    color: #ffffff;
+    background: #d63d57;
+    width: 250px;
+    padding: 8px;
+    margin: auto;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .optane {
+    text-align: center;
+  }
+  .paymentMethod {
+    text-align: center;
+  }
+  .paypal {
+    background: #009cde;
+    color: white;
+    width: 240px;
+    padding: 8px;
+    margin: auto;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .amazonPay {
+    background: linear-gradient(#3b3b3b, #6d6d6d, #e7e7e7);
+    color: #ffffff;
+    width: 240px;
+    padding: 8px;
+    margin: auto;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 18px;
+  }
+  
+  /* ************************************************************** */
+  .rightCart {
+    margin: auto;
+  }
+  .headerCart {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    background: #cecece;
+    margin-bottom: 15px;
+  }
+  .goods {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+  }
+  .itemGoods {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .itemPic img {
+    width: 100px;
+    height: 120px;
+  }
+  .manipu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 12px;
+    text-align: center;
+  }
+  .quantie{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .selQuan{
+    margin: auto;
+  }
+  .selQuan select{
+    width: 60px;
+  }
+  .inlin{
+    font-size: 12px;
+  }
+  .discQuan ok{
+    text-decoration: line-through;
+  }
+  .gift{
+    font-size: 14px;
+  }

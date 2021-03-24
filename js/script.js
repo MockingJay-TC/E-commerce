@@ -1,74 +1,67 @@
 // writing in javascript first then convert to jquery
 
-let increment = document.querySelector('#plu');
-let decrement = document.querySelector('#min');
-let input = document.querySelector('#change');
+let increment = document.querySelector("#plu");
+let decrement = document.querySelector("#min");
+let input = document.querySelector("#change");
 
+increment.addEventListener("click", () => {
+    if (input.innerText <= 9) input.innerText = parseInt(input.innerText) + 1;
+});
 
-increment.addEventListener('click', () => {
-
-    if (input.innerText <= 9)
-        input.innerText = parseInt(input.innerText) + 1;
-})
-
-decrement.addEventListener('click', () => {
+decrement.addEventListener("click", () => {
     if (input.innerText > 0) {
         input.innerText = parseInt(input.innerText) - 1;
-
     } else {
-        input.innerText = 0
+        input.innerText = 0;
     }
-})
+});
 
 // **********************************************************************************8
 
-let hoodie = document.querySelector('#hoodie');
-let cute = document.querySelector('#cute');
-let back = document.querySelector('#back');
-let current = document.querySelector('#currentImg');
+let hoodie = document.querySelector("#hoodie");
+let cute = document.querySelector("#cute");
+let back = document.querySelector("#back");
+let current = document.querySelector("#currentImg");
 
-hoodie.addEventListener('click', () => {
-    current.src = 'images/hoodie.jpg';
-    $('#hoodie').css('border', '3px solid #002b5c');
-    $('#cute').css('border', '3px solid #cecece');
-    $('#back').css('border', '3px solid #cecece');
-})
+hoodie.addEventListener("click", () => {
+    current.src = "images/hoodie.jpg";
+    $("#hoodie").css("border", "3px solid #002b5c");
+    $("#cute").css("border", "3px solid #cecece");
+    $("#back").css("border", "3px solid #cecece");
+});
 
-cute.addEventListener('click', () => {
-    current.src = 'images/cutie.jpg';
-    $('#cute').css('border', '3px solid #002b5c');
-    $('#hoodie').css('border', '3px solid #cecece');
-    $('#back').css('border', '3px solid #cecece');
-})
+cute.addEventListener("click", () => {
+    current.src = "images/cutie.jpg";
+    $("#cute").css("border", "3px solid #002b5c");
+    $("#hoodie").css("border", "3px solid #cecece");
+    $("#back").css("border", "3px solid #cecece");
+});
 
-back.addEventListener('click', () => {
-    current.src = 'images/back.jpg';
-    $('#back').css('border', '3px solid #002b5c');
-    $('#cute').css('border', '3px solid #cecece');
-    $('#hoodie').css('border', '3px solid #cecece');
-})
+back.addEventListener("click", () => {
+    current.src = "images/back.jpg";
+    $("#back").css("border", "3px solid #002b5c");
+    $("#cute").css("border", "3px solid #cecece");
+    $("#hoodie").css("border", "3px solid #cecece");
+});
 
-$('#currentImg').elevateZoom();
+$("#currentImg").elevateZoom();
 
+$(".wish").on("click", () => {
+    $("#wish").css("color", "red");
+});
 
+$("#bagit").on("click", () => {
+    $("#popup").slideDown("slow");
+    $("#popup").css("top", "0");
+});
 
-$('.wish').on('click', () => {
-    $('#wish').css('color', 'red');
-})
-
-$('#bagit').on('click', () => {
-    $('#popup').css('visibility', 'visible');
-    $('#popup').css('top', '0');
-})
-
-$('#close').on('click', () => {
-    $('#popup').css('visibility', 'hidden');
-    $('#popup').css('top', '-1000');
-})
+$("#close").on("click", () => {
+    $("#popup").fadeOut("slow");
+    $("#popup").css("top", "-1000");
+});
 
 $.get("./json/products.json", function (response) {
-    response.forEach(product => {
+    response.forEach((product) => {
         console.log(product.name + ":" + product.price);
     });
-
-})
+});

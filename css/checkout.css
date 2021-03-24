@@ -1,9 +1,19 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: "Nunito Sans", sans-serif;
+ 
+}
+.scaffold {
+  width: 98.8vw;
+  font-family: Nunito Sans, sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .container {
+  position: absolute;
+  /* padding-top: 70px; */
+  margin-top: 70px;
   display: grid;
   grid-template-columns: 2fr 5fr;
 }
@@ -160,9 +170,6 @@
 }
 .selQuan select{
   width: 60px;
-}
-.discQuan{
-  /* display: flex; */
 }
 .inlin{
   font-size: 12px;

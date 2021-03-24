@@ -7,14 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="scaffold">
         <div class="nav-section">
-
+            <div class="pic">
+                <a href="../index.html"> <img src="../images/logo.svg"></a>
+            </div>
+            <ul>
+                <li><a href="#">NEW</a> </li>
+                <li><a href="#">MEN</a> </li>
+                <li><a href="#">WOMEN</a> </li>
+                <li><a href="#">BOYS</a> </li>
+                <li><a href="#">GIRLS</a> </li>
+                <li><a href="#">MORE SIZES</a> </li>
+                <li><a href="#">TIES</a> </li>
+                <li><a href="#">SALE</a> </li>
+                <li><a href="#">MORE</a> </li>
+                <li>
+                    <div class="box">
+                        <input type="text" class="txt" placeholder="Type here">
+                        <a href="#"> <i class="fas fa-search"></i> </a>
+                    </div>
+                </li>
+                <li>
+                    <button class="click">
+                        <img src="../images/nav-icon.svg">
+                        <put>(<pin>3</pin>)</put>
+                    </button>
+                </li>
+            </ul>
         </div>
+
         <div class="container">
             <div class="leftCart">
                 <div class="summary">
@@ -43,7 +70,7 @@
                         <button id="apply"> Apply </button>
                     </div>
                     <div class="checkitout">
-                        <button id="checkitout">CHECKOUT</button>
+                        <a href="/pages/payment.html"> <button id="checkitout">CHECKOUT</button></a>
                     </div>
                     <p class="optane"> or pay with:</p>
                     <div class="paymentMethod">
@@ -106,7 +133,7 @@
                             <P>UNIT PRICE</P>
                             <div class="inlin">
                                 <P>Was
-                                <ok>@ $98.50</ok>
+                                    <ok>@ $98.50</ok>
                                 </P>
                                 <p>$195.96</p>
                             </div>
