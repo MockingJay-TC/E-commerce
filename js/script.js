@@ -2,9 +2,15 @@
 
 $('#promoPop').fadeIn('slow');
 
+
 let increment = document.querySelector("#plu");
 let decrement = document.querySelector("#min");
-let input = document.querySelector("#change");
+let input = document.querySelector('#change');
+
+
+
+
+
 
 increment.addEventListener("click", () => {
     if (input.innerText <= 9) {
@@ -16,11 +22,11 @@ increment.addEventListener("click", () => {
 });
 
 decrement.addEventListener("click", () => {
-    if (input.innerText > 0) {
+    if (input.innerText > 1) {
         input.innerText = parseInt(input.innerText) - 1;
         $('#me').text($('#change').text());
     } else {
-        input.innerText = 0;
+        input.innerText = 1;
     }
 });
 
@@ -61,12 +67,20 @@ $(".wish").on("click", () => {
 $("#bagit").on("click", () => {
     $("#popup").slideDown("slow");
     $("#popup").css("top", "0");
+
+
+inputVal = parseInt($('#change').text())
+
+
 });
 
 $("#close").on("click", () => {
     $("#popup").fadeOut("slow");
     $("#popup").css("top", "-1000");
+    alert(thePrice);
+    
 });
+
 
 $.get("./json/products.json", function (response) {
     response.forEach((product) => {
@@ -85,3 +99,16 @@ $('#closeme').on('click', ()=>{
 
 // adding items to bag
 
+// discount
+inputVal = $('#change').text();
+
+inputVal = parseInt(inputVal);
+
+unitPrice = $('#unitPrice').text();
+unitPrice = parseFloat(unitPrice);
+thePrice = (unitPrice * parseInt($('#change').text()));
+
+
+totalPrice = $('totalPrice').text();
+
+totalPrice = parseInt($('#change').text()) * parseFloat($('#unitPrice').text())

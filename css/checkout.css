@@ -15,7 +15,7 @@
   /* padding-top: 70px; */
   margin-top: 70px;
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 5fr 2fr;
 }
 .leftCart {
   width: 70%;

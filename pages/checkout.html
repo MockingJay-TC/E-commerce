@@ -36,53 +36,13 @@
                 <li>
                     <button class="click">
                         <img src="../images/nav-icon.svg">
-                        <put>(<pin>3</pin>)</put>
+                        <put>(<pin id="me">0</pin>)</put>
                     </button>
                 </li>
             </ul>
         </div>
 
         <div class="container">
-            <div class="leftCart">
-                <div class="summary">
-                    <div class="orderSum">
-                        <h2>Order Summary</h2>
-                        <h5>4 items</h5>
-                    </div>
-                    <div class="detailSum">
-                        <div class="value">
-                            <p>Subtotal</p>
-                            <p>Salex Tax</p>
-                            <p>ESTIMATED TOTAL*</p>
-                        </div>
-                        <div class="prices">
-                            <P id="subtotal">$195.96</P>
-                            <P id="tax">$0.00</P>
-                            <P id="addition"> <strong>$195.96</strong> </P>
-                        </div>
-                    </div>
-                    <div class="payment">
-                        <p>or 4 payments of $12.25 by </p>
-                        <img src="../images/afterpay-lockup-blackonwhite.svg" alt="">?
-                    </div>
-                    <div id="promo" class="code">
-                        <input type="text" class="txt" placeholder="Enter promo code">
-                        <button id="apply"> Apply </button>
-                    </div>
-                    <div class="checkitout">
-                        <a href="/pages/payment.html"> <button id="checkitout">CHECKOUT</button></a>
-                    </div>
-                    <p class="optane"> or pay with:</p>
-                    <div class="paymentMethod">
-                        <div class="paypal">
-                            <P>Paypal</P>
-                        </div>
-                        <div class="amazonPay">
-                            <p>AmazonPay</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="rightCart">
                 <div class="headerCart">
                     <div class="itemCart">
@@ -99,7 +59,7 @@
                         <p>TOTAL PRICE</p>
                     </div>
                 </div>
-                <div class="goods">
+                <div id="goods" class="goods">
                     <div class="itemGoods">
                         <div class="itemPic">
                             <img src="../images/hoodie.jpg" alt="">
@@ -111,6 +71,7 @@
                                     <strong>Size</strong>:4T
                                 </p>
                             </div>
+                    
                             <div class="manipu">
                                 <p><a href="#"> Edit </a></p>
                                 <!-- <p>|</p> -->
@@ -127,6 +88,12 @@
                                 <option value="2"> 2 </option>
                                 <option value="3"> 3 </option>
                                 <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                                <option value="10"> 10 </option>
                             </select>
                         </div>
                         <div class="discQuan">
@@ -157,8 +124,53 @@
                     </div>
                 </div>
             </div>
+            <div class="leftCart">
+                <div class="summary">
+                    <div class="orderSum">
+                        <h2>Order Summary</h2>
+                        <h5>4 items</h5>
+                    </div>
+                    <div class="detailSum">
+                        <div class="value">
+                            <p>Subtotal</p>
+                            <p>Salex Tax</p>
+                            <p>ESTIMATED TOTAL*</p>
+                        </div>
+                        <div class="prices">
+                            <P id="subtotal">$195.96</P>
+                            <P id="tax">$0.00</P>
+                            <P id="addition"> <strong>$195.96</strong> </P>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <p>or 4 payments of $12.25 by </p>
+                        <img src="../images/afterpay-lockup-blackonwhite.svg" alt="">?
+                    </div>
+                    <div id="promo" class="code">
+                        <input type="text" id="txt" placeholder="Enter promo code">
+                        <button id="apply" onclick=""> Apply </button>
+                    </div>
+                    <div class="checkitout">
+                        <a href="/pages/payment.html"> <button id="checkitout">CHECKOUT</button></a>
+                    </div>
+                    <p class="optane"> or pay with:</p>
+                    <div class="paymentMethod">
+                        <div class="paypal">
+                            <P>Paypal</P>
+                        </div>
+                        <div class="amazonPay">
+                            <p>AmazonPay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/elevate-zoom.js"></script>
+    <script src="../js/checkout.js" charset="utf-8"></script>
+    <!-- <script src="../js/store.js" charset="utf-8"></script>  -->
 </body>
 
 </html>
