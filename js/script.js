@@ -1,16 +1,24 @@
 // writing in javascript first then convert to jquery
 
+$('#promoPop').fadeIn('slow');
+
 let increment = document.querySelector("#plu");
 let decrement = document.querySelector("#min");
 let input = document.querySelector("#change");
 
 increment.addEventListener("click", () => {
-    if (input.innerText <= 9) input.innerText = parseInt(input.innerText) + 1;
+    if (input.innerText <= 9) {
+    input.innerText = parseInt(input.innerText) + 1;
+    // $('#me').text() = input.innerText;
+    $('#me').text($('#change').text());
+
+    }
 });
 
 decrement.addEventListener("click", () => {
     if (input.innerText > 0) {
         input.innerText = parseInt(input.innerText) - 1;
+        $('#me').text($('#change').text());
     } else {
         input.innerText = 0;
     }
@@ -66,4 +74,14 @@ $.get("./json/products.json", function (response) {
     });
 });
 
+
+$('#closeme').on('click', ()=>{
+    $('#promoPop').fadeOut('fast');
+    $('#overlay').css('display', 'none')
+    $('#overlay').slideUp('slow');
+})
 // **************************************************************************************************************
+
+
+// adding items to bag
+

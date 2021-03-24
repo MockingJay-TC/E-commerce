@@ -1,0 +1,96 @@
+#promoPop{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000;
+    background: #ffffff;
+    width: 400px;
+    padding: 40px 50px 50px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.6);
+    transition: 800ms ease-in-out;
+}
+#promoPop #proDis{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#proDis{
+    position: relative;
+}
+
+#proDis .closeIt{
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    top:0;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cornflowerblue;
+    line-height: 40px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#proDis .closeIt:hover{
+    background: tomato;
+    color: white;
+}
+#proDis img{
+    width: 200px;
+}
+#proDis h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+    margin: 20px 0 10px;
+}
+#proDis p{
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0px 5px 0px;
+}
+#proDis .emailInp{
+    position: relative;
+    width: 100%;
+    margin: 15px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#proDis .emailInp input{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+}
+#proDis .emailInp input[type="submit"]{
+    max-width: 100;
+}
+
+#proDis .disSub input{
+    width: auto;
+    padding: 10px;
+    color: #333;
+    font-size: 18px;
+    border-radius:5px ;
+}
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    filter: blur(30px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+}
