@@ -38,8 +38,7 @@
   }
   
   .detailSum {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     margin: 5px 0px 5px 0px;
     /* margin: 20px auto; */
     justify-content: center;
@@ -49,6 +48,9 @@
   }
   .prices {
     padding-left: 30px;
+  }
+  .prices p, .value p{
+    padding-bottom: 15px;
   }
   
   .payment {
@@ -103,38 +105,11 @@
   .optane {
     text-align: center;
   }
-  .paymentMethod {
-    text-align: center;
-  }
-  .paypal {
-    background: #009cde;
-    color: white;
-    width: 240px;
-    padding: 8px;
-    margin: auto;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  .amazonPay {
-    background: linear-gradient(#3b3b3b, #6d6d6d, #e7e7e7);
-    color: #ffffff;
-    width: 240px;
-    padding: 8px;
-    margin: auto;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-    font-size: 18px;
-  }
+  
   
   /* ************************************************************** */
   .rightCart {
-    margin: auto;
+    margin: 20% 50px 0px 10px;
   }
   .headerCart {
     display: grid;
@@ -161,10 +136,7 @@
     font-size: 12px;
     text-align: center;
   }
-  .quantie{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+ 
   .selQuan{
     margin: auto;
   }
@@ -172,7 +144,7 @@
     width: 60px;
   }
   .inlin{
-    font-size: 12px;
+    font-size: 16px;
   }
   .discQuan ok{
     text-decoration: line-through;

@@ -41,7 +41,7 @@
                     </div>
                 </li>
                 <li>
-                    <button class="click" onClick(a)>
+                    <button class="click" onclick="sendValues()">
                         <img src="images/nav-icon.svg">
                         <put>(<pin id="me">1</pin>)</put>
                     </button>
@@ -121,7 +121,7 @@
                     <i id="plu" class="fas fa-plus"></i>
                 </div>
                 <div class="cart">
-                    <div class="bag" id="bagit"> ADD TO BAG </div>
+                    <button class="bag" id="bagit" onclick="getValues()" > ADD TO BAG </button>
                     <div class="pickup">
                         <span>Buy online, free in-store pickup</span>
                         <p>Get it today at a store near you. <a href="#">Choose store</a> </p>
@@ -179,11 +179,13 @@
                             </div>
                             <P>Camel /<sizeit id='corres'> 2T </sizeit>
                             </P>
+                            <p>Qty: <quan id="quan"> 0 </quan> </p>
+                            <p>$ <fin id="finP"> 0 </fin> </p>
                         </div>
 
                     </div>
                     <div id="chickenOut" class="chickenput">
-                        <a href="/pages/checkout.html"> <button id="checkitin">CHECKOUT</button></a>
+                        <a href="/pages/checkout.html"> <button id="checkitin" onclick="getValues()">CHECKOUT</button></a>
                         <button id="checkitinSide">CONTINUE SHOPPING</button>
                     </div>
                 </div>
@@ -200,14 +202,14 @@
                 <h2> Get 10% off </h2>
                 <p>Your first purchase* when you enter: </p>
                 <div class="emailInp">
-                    <input type="text" placeholder="Enter your Email">
+                    <input type="text" placeholder="Enter your Email" id="unlockEmail">
                 </div>
                 <div class="emailCheck">
                     <input type="checkbox" id="tick" name="gift" value="tick">
                     <label for="tick">Yes! Sign me up to recieve emails from vineyard vines. </label><br>
                 </div>
                 <div class="disSub">
-                    <input type="submit" value="Unlock 10% Discount">
+                    <input type="submit" value="Unlock 10% Discount" id="unlock">
                 </div>
                 <p>*Cannot be combined with other promotions</p>
                 <p>By accepting this offer you agree to </p>

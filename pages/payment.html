@@ -47,40 +47,29 @@
                 <div class="summary">
                     <div class="orderSum">
                         <h2>Order Summary</h2>
-                        <h5>4 items</h5>
+                        <h5><ok id="track"> 0 </ok> items</h5>
                     </div>
                     <div class="detailSum">
                         <div class="value">
                             <p>Subtotal</p>
                             <p>Salex Tax</p>
-                            <p>ESTIMATED TOTAL*</p>
+                            <P>Shipping Discount (-)</P>
+                            <p><strong>TOTAL</strong></p>
                         </div>
                         <div class="prices">
-                            <P id="subtotal">$195.96</P>
-                            <P id="tax">$0.00</P>
-                            <P id="addition"> <strong>$195.96</strong> </P>
+                            <P>$ <ok id="subtotal"> 0 </ok>
+                            </P>
+                            <P>$ <ok id="tax"> 0.00 </ok>
+                            </P>
+                            <P>$ <ok id="ship"> 0.00 </ok>
+                            </p>
+                            <P> $ <strong id="addition"> 0 </strong> </P>
                         </div>
-                    </div>
-                    <div class="payment">
-                        <p>or 4 payments of $12.25 by </p>
-                        <img src="../images/afterpay-lockup-blackonwhite.svg" alt="">?
-                    </div>
-                    <div id="promo" class="code">
-                        <input type="text" class="txt" placeholder="Enter promo code">
-                        <button id="apply"> Apply </button>
                     </div>
                     <div class="checkitout">
-                        <button id="checkitout">CHECKOUT</button>
+                        <a href="#"> <button id="payment">NEXT PAYMENT</button></a>
                     </div>
-                    <p class="optane"> or pay with:</p>
-                    <div class="paymentMethod">
-                        <div class="paypal">
-                            <P>Paypal</P>
-                        </div>
-                        <div class="amazonPay">
-                            <p>AmazonPay</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="rightCart">
@@ -89,11 +78,11 @@
                         <p>ITEM</p>
                     </div>
                     <div class="quantityUnit">
-                        <p>QUANTITY & UNIT PRICE</p>
+                        <p>QUANTITY</p>
                     </div>
                     <div class="deliveryPic">
-                        <P>DELIVERY/PICKUP</P>
-                        <P></P>
+                        <P> UNIT PRICE</P>
+
                     </div>
                     <div class="totalCart">
                         <p>TOTAL PRICE</p>
@@ -111,49 +100,30 @@
                                     <strong>Size</strong>:4T
                                 </p>
                             </div>
-                            <div class="manipu">
-                                <p><a href="#"> Edit </a></p>
-                                <!-- <p>|</p> -->
-                                <p><a href="#"> Move to Wishlist </a> </p>
-                                <!-- <p>|</p> -->
-                                <p><a href="#"> Remove</a> </p>
-                            </div>
+
                         </div>
                     </div>
                     <div class="quantie">
                         <div class="selQuan">
-                            <select name="" id="">
-                                <option value="1"> 1 </option>
-                                <option value="2"> 2 </option>
-                                <option value="3"> 3 </option>
-                                <option value="4"> 4 </option>
-                            </select>
+                            <p id="finQuan"> 0 </p>
                         </div>
                         <div class="discQuan">
-                            <P>UNIT PRICE</P>
-                            <div class="inlin">
-                                <P>Was
-                                    <ok>@ $98.50</ok>
-                                </P>
-                                <p>$195.96</p>
-                            </div>
-                        </div>
-                        <div class="gift">
-                            <input type="checkbox" id="gift" name="gift" value="gift">
-                            <label for="gift"> Free gift package? </label><br>
+                            <P></P>
+
                         </div>
                     </div>
-                    <div class="pickup">
-                        <input type="radio" id="ship" name="deli" value="ship">
-                        <label for="ship"> Ship to me </label><br>
-                        <input type="radio" id="pickup" name="deli" value="pickup">
-                        <label for="pickup"> In-Store Pickup </label><br>
-                        <input type="radio" id="curb" name="deli" value="curb">
-                        <label for="curb"> Curbside Pickup</label><br>
+                    <div class="inlin">
+                        <P>$
+                            <ok> 0</ok>
+                        </P>
                     </div>
                     <div class="toapPRI">
-                        <P>$394.00</P>
-                        <P>$195.96</P>
+                        <P>$
+                            <ok id='siUnit'> 0</ok>
+                        </P>
+                        <P>$
+                            <ok id="toUnit"> 0</ok>
+                        </P>
                     </div>
                 </div>
             </div>
