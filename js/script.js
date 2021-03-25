@@ -177,16 +177,18 @@ function setDetails() {
         color: $('#color').val(),
         id: numberOfItems
     }
-    var initialOrder;
+    // var initialOrder;
     orderDetails = [details]
 
-    if (localStorage.getItem('orderDetails') != null) {
-        initialOrder = JSON.parse(localStorage.getItem('orderDetails'));
-        initialOrder.push(details);
-        localStorage.setItem('orderDetails', JSON.stringify(initialOrder));
-    } else {
-        localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
-    }
+    localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+
+    // if (localStorage.getItem('orderDetails') != null) {
+    //     initialOrder = JSON.parse(localStorage.getItem('orderDetails'));
+    //     initialOrder.push(details);
+    //     localStorage.setItem('orderDetails', JSON.stringify(initialOrder));
+    // } else {
+    //     localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+    // }
     // goods.html(fetchOrders());
 }
 
