@@ -16,14 +16,19 @@ $(document).ready(function () {
     $('#subtotal').text(thePrice);
 
     total = parseFloat(thePrice) * parseInt(theQuantity);
-    alert(total);
+
     $('#toUnit').text(total);
     $('#addition').text(total);
 
 
-    $('#remove').on('click', ()=>{
+    $('#remove').on('click', () => {
         $('#goods').css('visibility', 'hidden');
         localStorage.clear();
+        $('#theQuantity').text(0);
+    $('#siUnit').text(0);
+    $('#subtotal').text(0);
+    $('#toUnit').text(0);
+    $('#addition').text(0);
     })
 
 

@@ -1,6 +1,6 @@
 // writing in javascript first then convert to jquery
 
-// localStorage.clear();
+
 
 $('#promoPop').fadeIn('slow');
 
@@ -154,10 +154,6 @@ function sendValues() {
 
 
     window.open('http://127.0.0.1:5500/pages/checkout.html', '_top');
-}
-
-function applyDiscount() {
-    $('#txt').text();
 }
 
 var numberOfItems;
