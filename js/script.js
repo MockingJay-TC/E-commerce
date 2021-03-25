@@ -5,8 +5,6 @@
 $('#promoPop').fadeIn('slow');
 
 
-// let increment = document.querySelector("#plu");
-// let decrement = document.querySelector("#min");
 let input = document.querySelector('#change');
 
 

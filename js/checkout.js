@@ -25,10 +25,10 @@ $(document).ready(function () {
         $('#goods').css('visibility', 'hidden');
         localStorage.clear();
         $('#theQuantity').text(0);
-    $('#siUnit').text(0);
-    $('#subtotal').text(0);
-    $('#toUnit').text(0);
-    $('#addition').text(0);
+        $('#siUnit').text(0);
+        $('#subtotal').text(0);
+        $('#toUnit').text(0);
+        $('#addition').text(0);
     })
 
 
@@ -47,6 +47,6 @@ function discount() {
         $('#addition').text(total);
         alert(total);
 
-        localStorage.setItem('total',total)
+        localStorage.setItem('total', total)
     }
 }
