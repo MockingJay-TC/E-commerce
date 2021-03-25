@@ -1,5 +1,7 @@
 // writing in javascript first then convert to jquery
 
+// localStorage.clear();
+
 $('#promoPop').fadeIn('slow');
 
 
@@ -8,11 +10,7 @@ let decrement = document.querySelector("#min");
 let input = document.querySelector('#change');
 
 
-
-
-
-
-increment.addEventListener("click", () => {
+$('#plu').on("click", () => {
     if (input.innerText <= 9) {
         input.innerText = parseInt(input.innerText) + 1;
         // $('#me').text() = input.innerText;
@@ -21,7 +19,7 @@ increment.addEventListener("click", () => {
     }
 });
 
-decrement.addEventListener("click", () => {
+$('#min').on("click", () => {
     if (input.innerText > 1) {
         input.innerText = parseInt(input.innerText) - 1;
         $('#me').text($('#change').text());
@@ -37,28 +35,29 @@ let cute = document.querySelector("#cute");
 let back = document.querySelector("#back");
 let current = document.querySelector("#currentImg");
 
-hoodie.addEventListener("click", () => {
+$('#hoodie').on("click", () => {
     current.src = "images/hoodie.jpg";
     $("#hoodie").css("border", "3px solid #002b5c");
     $("#cute").css("border", "3px solid #cecece");
     $("#back").css("border", "3px solid #cecece");
 });
 
-cute.addEventListener("click", () => {
+$('#cute').on("click", () => {
     current.src = "images/cutie.jpg";
     $("#cute").css("border", "3px solid #002b5c");
     $("#hoodie").css("border", "3px solid #cecece");
     $("#back").css("border", "3px solid #cecece");
 });
 
-back.addEventListener("click", () => {
+$('#back').on("click", () => {
     current.src = "images/back.jpg";
     $("#back").css("border", "3px solid #002b5c");
     $("#cute").css("border", "3px solid #cecece");
     $("#hoodie").css("border", "3px solid #cecece");
 });
+// ********************************************************************************************************
 
-$("#currentImg").elevateZoom();
+// $("#currentImg").elevateZoom();
 
 $(".wish").on("click", () => {
     $("#wish").css("color", "red");
@@ -68,34 +67,39 @@ $("#bagit").on("click", () => {
     $("#popup").slideDown("slow");
     $("#popup").css("top", "0");
 
-
     inputVal = parseInt($('#change').text())
-
 
 });
 
 $("#close").on("click", () => {
     $("#popup").fadeOut("slow");
     $("#popup").css("top", "-1000");
-    alert(totalPrice);
 
 });
 
+// test
 
-$.get("./json/products.json", function (response) {
-    response.forEach((product) => {
-        console.log(product.name + ":" + product.price);
-    });
-});
 
+// $('#checkitin').on('click', () => {
+//     // setDetails();
+//     order = JSON.parse(localStorage.getItem('orderDetails'));
+//     theName = (order[0].productName);
+//     alert(theName);
+//     thePrice = (order[0].price);
+//     alert(thePrice);
+//     $('#cartPrice').text(thePrice);
+//     theQuantity = (order[0].quantity);
+//     $('#theQuantity').text(theQuantity);
+//     $('#siUnit').text(thePrice);
+
+// });
+// ********************************************************************************************************
 
 $('#closeme').on('click', () => {
     $('#promoPop').fadeOut('fast');
     $('#overlay').css('display', 'none')
     $('#overlay').slideUp('slow');
 })
-
-
 
 $('#unlock').on('click', () => {
     if ($('#unlockEmail').val() === "") {
@@ -107,7 +111,6 @@ $('#unlock').on('click', () => {
     }
 })
 // **************************************************************************************************************
-
 // adding items to bag
 // discount
 inputVal = $('#change').text();
@@ -118,11 +121,9 @@ unitPrice = $('#unitPrice').text();
 unitPrice = parseFloat(unitPrice);
 thePrice = (unitPrice * parseInt($('#change').text()));
 
-
 totalPrice = $('totalPrice').text();
 
 totalPrice = parseInt($('#change').text()) * parseFloat($('#unitPrice').text())
-
 
 function getValues() {
     amount = parseFloat($('#finP').text()).toFixed(2)
@@ -131,9 +132,7 @@ function getValues() {
     console.log("quantity: " + quantity);
     total = amount * quantity;
     console.log("totalPrice: " + total);
-
     // second thing
-
     amount2 = parseFloat($('#unitPrice').text()).toFixed(2)
     console.log("UnitPrice 2: " + amount2);
     quantity2 = parseInt($('#change').text())
@@ -141,58 +140,73 @@ function getValues() {
     total2 = amount2 * quantity2;
     total2 = parseFloat(total2).toFixed(2)
     console.log("totalPrice 2: " + total2);
-
     // updating
     $('#finP').text(total2);
     $('#quan').text(quantity2);
 
+    setDetails();
+
 }
 
-
-function sendValues(){
+function sendValues() {
 
 
 
 
     window.open('http://127.0.0.1:5500/pages/checkout.html', '_top');
 }
-function applyDiscount(){
+
+function applyDiscount() {
     $('#txt').text();
 }
-function setDetails(){
-    
-    numberOfItems +=1;
+
+var numberOfItems;
+
+if (localStorage.getItem('numberOfItems') == null) {
+    numberOfItems = 0;
+} else {
+    numberOfItems = localStorage.getItem('numberOfItems');
+}
+
+
+function setDetails() {
+
+    numberOfItems += 1;
     details = {
-        
+
         productName: $('#pName').text(),
-        price: $('#price').text(),
-        quantity: $('#quantity').text(),
+        price: $('#unitPrice').text(),
+        quantity: $('#change').text(),
         size: $('#sizeNo').val(),
         color: $('#color').val(),
-        id: numberOfItems 
-}
+        id: numberOfItems
+    }
     var initialOrder;
     orderDetails = [details]
-    
-    if(localStorage.getItem('orderDetails') != null){
+
+    if (localStorage.getItem('orderDetails') != null) {
         initialOrder = JSON.parse(localStorage.getItem('orderDetails'));
         initialOrder.push(details);
         localStorage.setItem('orderDetails', JSON.stringify(initialOrder));
-    }
-    else {
+    } else {
         localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
     }
-    goods.html(fetchOrders());
+    // goods.html(fetchOrders());
 }
 
+// function fetchOrders(){
+//     let order = JSON.parse(localStorage.getItem('orderDetails'));
+//     // console.log(order[0].productName);
+// }
 
 
-function removeCart(){
+
+function removeCart() {
 
     $('#goodies').hide();
 }
 
-$('#qty').change(function(){
+$('#qty').change(function () {
     $('#displayqty').text($(this).val());
 })
 
