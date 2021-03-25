@@ -46,5 +46,7 @@ function discount() {
         total = parseFloat(total) / 2;
         $('#addition').text(total);
         alert(total);
+
+        localStorage.setItem('total',total)
     }
 }

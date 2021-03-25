@@ -10,17 +10,19 @@ $('#siUnit').text(thePrice);
 $('#subtotal2').text(thePrice);
 
 total = parseFloat(thePrice) * parseInt(theQuantity);
+
+var newTotal = localStorage.getItem('total');
 if (total > 120) {
 
     // $('#toUnit').text(total - 12);
-    $('#addition').text(total - 12);
+    $('#addition').text(newTotal - 12);
     $('#ship').text(12)
 } else {
     
-    $('#addition').text(total);
+    $('#addition').text(newTotal);
     $('#ship').text(0)
 }
-$('#toUnit').text(total);
+$('#toUnit').text(newTotal);
 
 function discount2() {
  

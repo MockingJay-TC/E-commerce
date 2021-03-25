@@ -5,17 +5,18 @@
 $('#promoPop').fadeIn('slow');
 
 
-let increment = document.querySelector("#plu");
-let decrement = document.querySelector("#min");
+// let increment = document.querySelector("#plu");
+// let decrement = document.querySelector("#min");
 let input = document.querySelector('#change');
 
 
 $('#plu').on("click", () => {
-    if (input.innerText <= 9) {
+    
+    if (Number(input.innerText) <= 9) {
+        console.log(input.innerText);
         input.innerText = parseInt(input.innerText) + 1;
-        // $('#me').text() = input.innerText;
-        $('#me').text($('#change').text());
-
+        $('#me').text(input.innerText);
+        // $('#me').text($('#change').text());
     }
 });
 
@@ -23,7 +24,8 @@ $('#min').on("click", () => {
     if (input.innerText > 1) {
         input.innerText = parseInt(input.innerText) - 1;
         $('#me').text($('#change').text());
-    } else {
+    } 
+    else {
         input.innerText = 1;
     }
 });
@@ -122,24 +124,34 @@ unitPrice = parseFloat(unitPrice);
 thePrice = (unitPrice * parseInt($('#change').text()));
 
 totalPrice = $('totalPrice').text();
+console.log(totalPrice);
+totalPrice = parseInt($('#change').text()) * parseFloat($('#unitPrice').text());
+// console.log(total2);
 
-totalPrice = parseInt($('#change').text()) * parseFloat($('#unitPrice').text())
+
+$('#checkitin').on('click', () => {
+    // localStorage.setItem('CartTotal', totalPrice);
+  localStorage.setItem('total', $('#finP').text()) ;
+});
+
+
+
 
 function getValues() {
     amount = parseFloat($('#finP').text()).toFixed(2)
-    console.log("unitPrice: " + amount);
+    // console.log("unitPrice: " + amount);
     quantity = parseInt($('#quan').text())
-    console.log("quantity: " + quantity);
+    // console.log("quantity: " + quantity);
     total = amount * quantity;
-    console.log("totalPrice: " + total);
+    // console.log("totalPrice: " + total);
     // second thing
     amount2 = parseFloat($('#unitPrice').text()).toFixed(2)
-    console.log("UnitPrice 2: " + amount2);
+    // console.log("UnitPrice 2: " + amount2);
     quantity2 = parseInt($('#change').text())
-    console.log("Quantity 2: " + quantity2);
+    // console.log("Quantity 2: " + quantity2);
     total2 = amount2 * quantity2;
     total2 = parseFloat(total2).toFixed(2)
-    console.log("totalPrice 2: " + total2);
+    // console.log("totalPrice 2: " + total2);
     // updating
     $('#finP').text(total2);
     $('#quan').text(quantity2);
