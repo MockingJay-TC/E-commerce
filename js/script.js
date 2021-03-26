@@ -163,7 +163,7 @@ function sendValues() {
 
 
 
-    window.open('http://127.0.0.1:5500/pages/checkout.html', '_top');
+    window.open('pages/checkout.html', '_top');
 }
 
 var numberOfItems;
